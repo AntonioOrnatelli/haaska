@@ -84,7 +84,7 @@ class Configuration(object):
 
         self.url = os.environ.get("HA_URL")
         self.bearer_token = os.environ.get("HA_TOKEN")
-        self.ssl_verify = self.get(['ssl_verify', 'ha_cert'], default=True)
+        self.ssl_verify = self.get(['ssl_verify', 'ha_cert'], default=False)
         self.ssl_client = self.get(['ssl_client'], default='')
         self.debug = self.get(['debug'], default=False)
 
